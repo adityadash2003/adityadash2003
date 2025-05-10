@@ -1,4 +1,4 @@
-# 👨‍💻 Hi Hackers!
+# 👨‍💻 Hi There!
 
 ![Meowware GIF](./hack.gif)
 
@@ -7,11 +7,12 @@
 
 def Bio():
     name        : str = "Aditya Dash"
-    aka         : list = ["CyberSentinel", "ZeroDay Hunter"]
-    status      : str = "Cybersecurity Student"
+    aka         : list = "Hacker"
+    status      : str = "Student"
     university  : str = "C. V. Raman Global University"
     location    : str = "Bhubaneswar, India"
-    designation : str = "Cybersecurity Enthusiast"
+    height      : float = 5.11
+    work area   : str= "Cybersecurity"
     hobby       : str = "Breaking and Securing Systems"
 
 def Stack():
