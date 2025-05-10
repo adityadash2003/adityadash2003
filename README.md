@@ -1,6 +1,6 @@
 # 👨‍💻 Hi Hackers!
 
-![Meowware GIF](https://images.app.goo.gl/LaSD1vugctGWQUgi8)
+![Meowware GIF](./cyber-monday.gif)
 
 ```python
 # import HelloGitHub!
