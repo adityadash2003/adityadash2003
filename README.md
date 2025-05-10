@@ -1,16 +1,31 @@
-## Hi there 👋
+# 👨‍💻 Hi Hackers!
 
-<!--
-**adityadash2003/adityadash2003** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+![Meowware GIF](https://images.app.goo.gl/LaSD1vugctGWQUgi8)
 
-Here are some ideas to get you started:
+```python
+# import HelloGitHub!
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+def Bio():
+    name        : str = "Aditya Dash"
+    aka         : list = ["CyberSentinel", "ZeroDay Hunter"]
+    status      : str = "Cybersecurity Student"
+    university  : str = "C. V. Raman Global University"
+    location    : str = "Bhubaneswar, India"
+    designation : str = "Cybersecurity Enthusiast"
+    hobby       : str = "Breaking and Securing Systems"
+
+def Stack():
+    languages   : list = ["Python", "Bash", "Java"]
+    tools       : list = ["Wireshark", "Burp Suite", "Nmap", "Metasploit", "Cobalt Strike", "Impacket", "Splunk"]
+    domains     : list = ["VAPT", "OSINT", "Digital Forensics", "Incident Response"]
+
+def Areas():
+    Cybersecurity       : float = 5.0 / 5.0
+    WebApp Pentesting   : float = 4.5 / 5.0
+    Digital Forensics   : float = 4.0 / 5.0
+
+def Social():
+    email       : str = "adityadash316@gmail.com"
+    linkedin    : str = "linkedin.com/in/aditya-dash-4a9600204"
+
+# run("Stay Curious. Stay Secure. ⚔️")
