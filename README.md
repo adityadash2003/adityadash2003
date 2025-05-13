@@ -3,8 +3,7 @@
 ![Meowware GIF](./hack.gif)
 
 
-
-![My Photo](./git_profile.png)
+<img src="/git_profile.png" alt="Description" width="3000" height="900"/>
 
 
 ![Meowware GIF](./cyber-monday.gif)
