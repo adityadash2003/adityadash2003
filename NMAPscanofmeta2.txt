@@ -1,0 +1,143 @@
+─(parallels㉿kali-linux-2022-2)-[~]
+└─$ sudo nmap -A 192.168.64.4                   
+[sudo] password for parallels: 
+Starting Nmap 7.92 ( https://nmap.org ) at 2024-02-24 18:26 IST
+Nmap scan report for 192.168.64.4
+Host is up (0.0011s latency).
+Not shown: 977 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.64.1
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)
+|_  2048 56:56:24:0f:21:1d:de:a7:2b:ae:61:b1:24:3d:e8:f3 (RSA)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|_    SSL2_DES_64_CBC_WITH_MD5
+|_ssl-date: 2024-02-24T12:56:40+00:00; -38s from scanner time.
+|_smtp-commands: metasploitable.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN
+| ssl-cert: Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX
+| Not valid before: 2010-03-17T14:07:45
+|_Not valid after:  2010-04-16T14:07:45
+53/tcp   open  domain      ISC BIND 9.4.2
+| dns-nsid: 
+|_  bind.version: 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+|_http-title: Metasploitable2 - Linux
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2
+111/tcp  open  rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100005  1,2,3      51898/udp   mountd
+|   100005  1,2,3      54958/tcp   mountd
+|   100021  1,3,4      33885/tcp   nlockmgr
+|   100021  1,3,4      52560/udp   nlockmgr
+|   100024  1          41266/udp   status
+|_  100024  1          57280/tcp   status
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+512/tcp  open  exec        netkit-rsh rexecd
+513/tcp  open  login
+514/tcp  open  tcpwrapped
+1099/tcp open  java-rmi    GNU Classpath grmiregistry
+1524/tcp open  bindshell   Metasploitable root shell
+2049/tcp open  nfs         2-4 (RPC #100003)
+2121/tcp open  ftp         ProFTPD 1.3.1
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.0.51a-3ubuntu5
+|   Thread ID: 9
+|   Capabilities flags: 43564
+|   Some Capabilities: Support41Auth, SupportsTransactions, SupportsCompression, SwitchToSSLAfterHandshake, Speaks41ProtocolNew, LongColumnFlag, ConnectWithDatabase
+|   Status: Autocommit
+|_  Salt: oz7B$-VHHnrq`o,,9wpI
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+|_ssl-date: 2024-02-24T12:56:40+00:00; -38s from scanner time.
+| ssl-cert: Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX
+| Not valid before: 2010-03-17T14:07:45
+|_Not valid after:  2010-04-16T14:07:45
+5900/tcp open  vnc         VNC (protocol 3.3)
+| vnc-info: 
+|   Protocol version: 3.3
+|   Security types: 
+|_    VNC Authentication (2)
+6000/tcp open  X11         (access denied)
+6667/tcp open  irc         UnrealIRCd
+8009/tcp open  ajp13       Apache Jserv (Protocol v1.3)
+|_ajp-methods: Failed to get a valid response for the OPTION request
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+|_http-favicon: Apache Tomcat
+|_http-title: Apache Tomcat/5.5
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=2/24%OT=21%CT=1%CU=39368%PV=Y%DS=1%DC=T%G=Y%TM=65D9E7A
+OS:E%P=aarch64-unknown-linux-gnu)SEQ(SP=102%GCD=1%ISR=109%TI=I%CI=I%II=I%SS
+OS:=S%TS=U)OPS(O1=M5B4W1N%O2=M578W1N%O3=M280W1N%O4=M5B4W1N%O5=M218W1N%O6=M1
+OS:09W0N)WIN(W1=8000%W2=8000%W3=8000%W4=8000%W5=8000%W6=8000)ECN(R=Y%DF=N%T
+OS:G=80%W=8000%O=M5B4W1N%CC=N%Q=)ECN(R=Y%DF=N%T=80%W=8000%O=M5B4W1N%CC=N%Q=
+OS:)T1(R=Y%DF=N%TG=80%S=O%A=S+%F=AS%RD=0%Q=)T1(R=Y%DF=N%T=80%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=Y%DF=N%TG=80%W=2000%S=A%A=S%F=AR%O=%RD=0%Q=)T2(R=Y%DF=N%T=8
+OS:0%W=2000%S=A%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=N%TG=80%W=8000%S=O%A=S+%F=AS%
+OS:O=M109W1N%RD=0%Q=)T3(R=Y%DF=N%T=80%W=8000%S=O%A=S+%F=AS%O=M109W1N%RD=0%Q
+OS:=)T4(R=Y%DF=N%TG=80%W=2000%S=A%A=S%F=R%O=%RD=0%Q=)T4(R=Y%DF=N%T=80%W=200
+OS:0%S=A%A=S%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%TG=80%W=2000%S=O%A=S+%F=AR%O=%RD=0%
+OS:Q=)T5(R=Y%DF=N%T=80%W=2000%S=O%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%TG=80%W=
+OS:2000%S=A%A=S%F=R%O=%RD=0%Q=)T6(R=Y%DF=N%T=80%W=2000%S=A%A=S%F=R%O=%RD=0%
+OS:Q=)T7(R=Y%DF=N%TG=80%W=2000%S=A%A=S%F=AR%O=%RD=0%Q=)T7(R=Y%DF=N%T=80%W=2
+OS:000%S=A%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%TG=80%IPL=164%UN=0%RIPL=G%RID=98
+OS:CA%RIPCK=G%RUCK=G%RUD=G)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=C173%RI
+OS:PCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%TG=80%CD=S)IE(R=Y%DFI=N%T=80%CD=S)
+
+Network Distance: 1 hop
+Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   Computer name: metasploitable
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: metasploitable.localdomain
+|_  System time: 2024-02-24T07:56:33-05:00
+|_clock-skew: mean: 1h14m22s, deviation: 2h30m01s, median: -38s
+|_smb2-time: Protocol negotiation failed (SMB2)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_nbstat: NetBIOS name: METASPLOITABLE, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.31 ms 192.168.64.4
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 31.92 seconds
